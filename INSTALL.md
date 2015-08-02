@@ -51,3 +51,24 @@ test every commit.  See the README.md file for current build status.
 
 The build configuration files (.drone.yml and circle.yml) therefore
 always contains up-to-date instructions to build EncFS on Ubuntu distributions.
+
+Compiling on Mac OS-X
+=====================
+
+* Install [Homebrew](http://brew.sh)
+* Install [OSXFuse](https://osxfuse.github.io)
+* Checkout encfs and cd into the encfs dir. Then:
+ 
+    brew install boost
+    brew install gettext
+    brew install cmake
+    mkdir build
+    cd build
+    cmake ..
+    make install
+
+Note: Some months ago, there was a brew formula for encfs, so `brew install encfs` was possible. At the time of this writing, unfortunately the formula didn't exist anymore. So I had to compile it myself for my new Mac.
+
+
+
+
